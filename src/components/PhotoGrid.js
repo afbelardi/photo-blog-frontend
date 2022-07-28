@@ -9,7 +9,11 @@ export default function PhotoGrid(props) {
       {Object.keys(props.data).length
       ? props.data.map(photo => {
         return (
-          <img key={photo.url} className="photos" src={photo.url}></img>
+          <div className="photo-wrapper">
+            <img key={photo.url} className="photos" src={photo.url}></img>
+            <h1>{photo.dateTaken}</h1>
+            <h1>{photo.placeTaken}</h1>
+          </div>
         )
       })
     : ''

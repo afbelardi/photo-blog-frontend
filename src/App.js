@@ -12,7 +12,7 @@ function App(props) {
 useEffect(() => {
   (async () => {
     try {
-      const response = await axios.get('http://localhost:3000/photos')
+      const response = await axios.get('https://photo-blog-backend.herokuapp.com/photos')
       const data = await response.data
       setPhotos(data);
     } catch (error) {
