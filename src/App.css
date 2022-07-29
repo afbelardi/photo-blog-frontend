@@ -1,11 +1,12 @@
 
-
 .app-container {
     height: 100vh;
     width: 100vw;
     background-color: #FFFDFB;
     overflow: scroll;
 }
+
+
 
 
 /* HEADER STYLING */ 
@@ -35,17 +36,14 @@
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
-
+    margin-bottom: 60px;
+    z-index: -1000;
 }
-/* @media only screen and(min-width: 400px) {
-    #photo-grid-container {
-        background-color: black;
-    }
-} */
+
 
 .photo-wrapper {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .photos {
@@ -54,4 +52,25 @@
  
 }
 
+.modal-background {
+    height: 100vh;
+    width: 100vw;
+    z-index: 2000;
+    background-color: rgba(119,136,153,0.7);
+   position: absolute;
+   top: 0;
+   bottom: 0;
 
+}
+.modal-img {
+    background-color: blue;
+    z-index: 1000;
+    position: fixed;
+    height: 50%;
+    width: 70%;
+    top: 50%; 
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
