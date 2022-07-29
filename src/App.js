@@ -14,6 +14,10 @@ function App(props) {
       setModal(false)
     }
   }
+
+  const getValue = (event) => {
+    console.log(event.currentTarget.value)
+  }
  
 useEffect(() => {
   (async () => {
@@ -41,7 +45,7 @@ useEffect(() => {
       />
       {
         modal ? 
-          <Modal/>
+          <Modal data={photos} setPhotos={setPhotos}/>
         : ''
       }
     </div>

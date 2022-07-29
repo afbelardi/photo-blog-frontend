@@ -5,7 +5,7 @@ export default function Modal(props) {
 
   return (
     <div className="modal-background">
-        <div className="modal-img">Modal</div>
+        <img className="modal-img" src={props.data[0].url}></img>
     </div>
     
   )

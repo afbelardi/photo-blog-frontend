@@ -3,7 +3,7 @@
     height: 100vh;
     width: 100vw;
     background-color: #FFFDFB;
-    overflow: scroll;
+    overflow: auto;
 }
 
 
@@ -36,8 +36,14 @@
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
-    margin-bottom: 60px;
     z-index: -1000;
+}
+
+@media only screen and (min-width: 850px) {
+    #photo-grid-container {
+        display: grid;
+       
+    }
 }
 
 
@@ -57,17 +63,16 @@
     width: 100vw;
     z-index: 2000;
     background-color: rgba(119,136,153,0.7);
-   position: absolute;
-   top: 0;
-   bottom: 0;
-
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    
 }
 .modal-img {
-    background-color: blue;
     z-index: 1000;
     position: fixed;
-    height: 50%;
-    width: 70%;
+    max-height: 80%;
+    max-width: 90%;
     top: 50%; 
     bottom: 50%;
     left: 50%;
