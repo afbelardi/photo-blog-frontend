@@ -39,17 +39,12 @@
     z-index: -1000;
 }
 
-@media only screen and (min-width: 850px) {
-    #photo-grid-container {
-        display: grid;
-       
-    }
-}
+
 
 
 .photo-wrapper {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .photos {
@@ -57,6 +52,18 @@
     max-height: 80vh;
  
 }
+
+@media only screen and (min-width: 850px) {
+    #photo-grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .photos {
+        max-width: 30vw;
+    }
+}
+
 
 .modal-background {
     height: 100vh;
