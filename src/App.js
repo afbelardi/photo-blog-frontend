@@ -6,8 +6,9 @@ import Modal from './components/Modal';
 
 function App(props) {
 
-  const [photos, setPhotos] = useState([])
+  const [photos, setPhotos] = useState([]);
   const [modal, setModal] = useState(false);
+  const [selectedPhoto, setSelectedPhoto] = useState({});
 
   const changeState = () => {
     if (modal === true) {
@@ -15,9 +16,7 @@ function App(props) {
     }
   }
 
-  const getValue = (event) => {
-    console.log(event.currentTarget.value)
-  }
+
  
 useEffect(() => {
   (async () => {
@@ -42,10 +41,15 @@ useEffect(() => {
         setPhotos={setPhotos}  
         setModal={setModal} 
         changeState={changeState}
+        setSelectedPhoto={setSelectedPhoto}
       />
       {
         modal ? 
-          <Modal data={photos} setPhotos={setPhotos}/>
+          <Modal 
+          data={photos} 
+          setPhotos={setPhotos}
+          selectedPhoto={selectedPhoto}
+          />
         : ''
       }
     </div>
