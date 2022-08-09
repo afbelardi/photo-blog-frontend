@@ -36,8 +36,29 @@
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
+    margin-bottom: 40px;
     z-index: -1000;
 }
+
+#photo-grid-dark-mode {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    z-index: -1000;
+    background-color: black;
+}
+
+@media only screen and (min-width: 700px) {
+    #photo-grid-dark-mode {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 0;
+    }
+    }
 
 
 
@@ -57,13 +78,21 @@
     #photo-grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-      
+        margin-bottom: 0;
         
     }
 
     .photos {
         max-width: 30vw;
     }
+}
+
+.image-font {
+    color: black;
+}
+
+.image-font-dark-mode {
+    color:#FFFDFB;
 }
 
 

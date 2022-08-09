@@ -3,12 +3,13 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import PhotoGrid from './components/PhotoGrid';
 import Modal from './components/Modal';
-
+import { Button } from 'react-bootstrap';
 function App(props) {
 
   const [photos, setPhotos] = useState([]);
   const [modal, setModal] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState({});
+  const [theme, setTheme] = useState(false);
 
   const changeState = () => {
     if (modal === true) {
@@ -16,6 +17,13 @@ function App(props) {
     }
   }
 
+  const changeTheme = () => {
+    if (theme === false) {
+      setTheme(true);
+    } else {
+      setTheme(false)
+    }
+  }
 
  
 useEffect(() => {
@@ -35,6 +43,7 @@ useEffect(() => {
       <header className="header">
         <h1 id="header-title">AFBELARDI</h1> 
           <h3>A photo blog of my travels.</h3>
+          <Button onClick={() => {changeTheme()}}>Dark Mode</Button>
       </header>
       <PhotoGrid 
         data={photos} 
@@ -42,6 +51,7 @@ useEffect(() => {
         setModal={setModal} 
         changeState={changeState}
         setSelectedPhoto={setSelectedPhoto}
+        theme={theme}
       />
       {
         modal ? 
