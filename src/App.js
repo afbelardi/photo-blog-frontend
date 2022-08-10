@@ -3,7 +3,8 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import PhotoGrid from './components/PhotoGrid';
 import Modal from './components/Modal';
-import { Button } from 'react-bootstrap';
+// import { Button } from 'react-bootstrap';
+import BootstrapSwitchButton from 'bootstrap-switch-button-react';
 function App(props) {
 
   const [photos, setPhotos] = useState([]);
@@ -39,11 +40,18 @@ useEffect(() => {
 }, []);
 
   return (
-    <div className="app-container" onClick={changeState}>
+    <div className={theme ? "app-container-dark-mode" : "app-container"} onClick={changeState}>
       <header className="header">
-        <h1 id="header-title">AFBELARDI</h1> 
-          <h3>A photo blog of my travels.</h3>
-          <Button onClick={() => {changeTheme()}}>Dark Mode</Button>
+        <h1 id={theme ? "header-title-dark-mode" : "header-title"}>AFBELARDI</h1> 
+          <h3 id={theme ? "header-subtitle-dark-mode" : "header-subtitle"}>A photo blog of my travels.</h3>
+          <BootstrapSwitchButton 
+          width={100}
+          onstyle="outline-primary"
+          offstyle="outline-secondary"
+          onlabel="Dark"
+          offlabel="Light"
+          checked={false}
+          onChange={(e) => {changeTheme()}}/>
       </header>
       <PhotoGrid 
         data={photos} 

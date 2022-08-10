@@ -6,6 +6,13 @@
     overflow: auto;
 }
 
+.app-container-dark-mode {
+    height: 100vh;
+    width: 100vw;
+    background-color: #FFFDFB;
+    overflow: auto;
+    background-color: black;
+}
 
 
 
@@ -19,12 +26,26 @@
     flex-direction: column;
     align-items: center;
     padding: 5px;
-    margin-top: 10px;
-
+    margin-top: 50px;
 }
+
 
 #header-title {
     font-size: 60px;
+}
+
+#header-title-dark-mode {
+    font-size: 60px;
+    color: #FFFDFB;
+}
+
+#header-subtitle {
+    margin-bottom: 30px
+}
+
+#header-subtitle-dark-mode {
+    color: #FFFDFB;
+    margin-bottom: 20px;
 }
 
 /* PHOTO GRID STYLING */
@@ -35,7 +56,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 80px;
     margin-bottom: 40px;
     z-index: -1000;
 }
@@ -46,7 +67,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 80px;
     margin-bottom: 40px;
     z-index: -1000;
     background-color: black;
@@ -74,7 +95,7 @@
     cursor: pointer;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 850px) {
     #photo-grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -84,6 +105,12 @@
 
     .photos {
         max-width: 30vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #photo-grid-container {
+        margin-bottom: 20px;
     }
 }
 
