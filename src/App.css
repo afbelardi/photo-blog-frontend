@@ -4,6 +4,7 @@
     width: 100vw;
     background-color: #FFFDFB;
     overflow: auto;
+    margin-bottom: 40px;
 }
 
 .app-container-dark-mode {
@@ -59,6 +60,7 @@
     margin-top: 80px;
     margin-bottom: 40px;
     z-index: -1000;
+    padding-bottom: 10px;
 }
 
 #photo-grid-dark-mode {
@@ -86,6 +88,7 @@
     cursor: pointer;
 }
 
+
 @media only screen and (min-width: 850px) {
     #photo-grid-container {
         display: grid;
@@ -104,6 +107,7 @@
         max-width: 30vw;
     }
 }
+
 
 @media only screen and (min-width: 1200px) {
     #photo-grid-container {
