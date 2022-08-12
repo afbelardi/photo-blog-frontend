@@ -92,14 +92,14 @@
 @media only screen and (min-width: 850px) {
     #photo-grid-container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         margin-bottom: 0;
         
     }
 
     #photo-grid-dark-mode {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         margin-bottom: 0;
     }
 
@@ -112,6 +112,7 @@
 @media only screen and (min-width: 1200px) {
     #photo-grid-container {
         margin-bottom: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
