@@ -10,7 +10,8 @@ function App(props) {
   const [photos, setPhotos] = useState([]);
   const [modal, setModal] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState({});
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState(
+    localStorage.getItem('light-mode') === 'true');
 
   const changeState = () => {
     if (modal === true) {
@@ -27,6 +28,10 @@ function App(props) {
   }
 
  
+  useEffect(() => {
+    window.localStorage.setItem('light-mode', theme);
+  }, [theme]);
+
 useEffect(() => {
   (async () => {
     try {
@@ -39,6 +44,9 @@ useEffect(() => {
 })()
 }, []);
 
+
+
+
   return (
     <div className={theme ? "app-container-dark-mode" : "app-container"} onClick={changeState}>
       <header className="header">
@@ -50,7 +58,7 @@ useEffect(() => {
           offstyle="outline-secondary"
           onlabel="Dark"
           offlabel="Light"
-          checked={false}
+          checked={!theme ? false : true}
           onChange={(e) => {changeTheme()}}/>
       </header>
       <PhotoGrid 
