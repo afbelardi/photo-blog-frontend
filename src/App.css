@@ -61,6 +61,8 @@
     margin-bottom: 40px;
     z-index: -1000;
     padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #photo-grid-dark-mode {
