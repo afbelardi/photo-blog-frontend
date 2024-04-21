@@ -2,9 +2,10 @@
 .app-container {
     height: 100vh;
     width: 100vw;
-    background-color: #FFFDFB;
+    background-color: #F4F0E0;
     overflow: auto;
     margin-bottom: 40px;
+    transition: background-color 1s ease;
 }
 
 .app-container-dark-mode {
@@ -13,6 +14,7 @@
     background-color: #FFFDFB;
     overflow: auto;
     background-color: black;
+    transition: background-color 1s ease;
 }
 
 
@@ -21,15 +23,25 @@
 
 .header {
     width: 100vw;
-    height: 10vh;
+    height: 20vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     padding: 5px;
-    margin-top: 50px;
 }
 
+.header-dark-mode {
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    background-color: black;
+    transition: background-color 1s ease;
+}
 
 #header-title {
     font-size: 60px;
@@ -69,10 +81,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 80px;
+    padding-top: 80px;
     margin-bottom: 40px;
     z-index: -1000;
     background-color: black;
+    transition: background-color 1s ease;
 }
 
 
